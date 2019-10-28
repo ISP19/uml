@@ -1,3 +1,10 @@
+#
+# Draw a UML class diagram based on this code.
+# Show classes, attributes, and methods and
+# relationships between classes such as inheritance,
+# association, and dependency.
+# Use correct UML notation, show multiplicity where it makes sense.
+#
 class Point:
 	"""Class represents a point in cartesian coordinates"""
 	def __init__(self, x:float, y:float):
