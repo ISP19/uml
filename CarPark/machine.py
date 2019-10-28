@@ -11,21 +11,31 @@ class Person:
         self.age = age
         
 class Car:
-    def __init__(self, brand:str,owner:Person):
+    def __init__(self, brand:str,owner:Person,mile):
         self.brand = brand
         self.owner = owner
+        self.miles = mile
     
     def park(self, carpark:CarParking):
         if carpark.valid >0:
             carpark.valid -= 1
             carpark.park.append(self)
 
+class Toyota(Car):
+    def __init__(self, model:str,owner:Person,mile:int):
+        self.model = model 
+        super().__init__('Toyota',owner,mile)
+
+class Benz(Car):
+    def __init__(self, model:str,owner:Person,mile:int):
+        self.model = model 
+        super().__init__('Benz',owner,mile)
 
 house = CarParking(10,100)
 korn = Person('korn',19)
 
-car = Car('benz',korn)
-car.park(house)
+korn_car = Benz('s350e',korn,0)
+korn_car.park(house)
 print(house.valid)
 
 
