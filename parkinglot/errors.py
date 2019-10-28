@@ -1,0 +1,2 @@
+class ParkinglotError(Error):
+  pass
