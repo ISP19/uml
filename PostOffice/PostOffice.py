@@ -3,21 +3,25 @@ class MailOffice():
         self.mail = mail
 
 class Mail():
-    def __init__(self, name , address : Address, message : Message):
-        self.name = name
+    def __init__(self, sendername , address : Address, message : Message):
+        self.sender = sendername
         self.address = address
         self.message = message
     
-    def held_at(self):
+    def sender(self):
+        return self.sender
+
+    def contact(self):
         return self.address
 
-    def contact_us(self):
+    def message(self):
         return self.message
 
 class Address():
-    def __init__(self, district, subdistrict, road, province, postalcode):
+    def __init__(self,recipientname, district, subdistrict, road, province, postalcode):
+        self.recipientname = recipientname
         self.district = district
-        self.subDistrict = subdistrict
+        self.subdistrict = subdistrict
         self.road = road
         self.province = province
         self.postalcode = postalcode
