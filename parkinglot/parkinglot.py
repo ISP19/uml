@@ -12,9 +12,12 @@ class Parkinglot():
         return [Slot(id) for id in range(1, slot_count+1)]
 
     def car_in(self, car):
+      try:
         slot = self.get_nearest_available_slot()
         slot.is_available = False
         slot.car = car
+      except Exception as error:
+        print(error)
 
     def car_out(self, slot_id):
         for slot in self.slots:
