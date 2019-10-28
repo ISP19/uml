@@ -37,4 +37,3 @@ class Rectangle(Polygon):
 	# more efficient computation of area than done in Polygon
 	def area(self) -> float:
 		return abs( self.width * self.height )
-	
