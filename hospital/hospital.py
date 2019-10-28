@@ -19,6 +19,10 @@ class Doctor(Hospital):
 		self.name = doctor_name
 		self.skill = specialize
 
-	def responsibility(self) -> str:
+	def responsibility(self, use:Medicine) -> str:
 		# code omitted
 		return ""
+
+class Medicine:
+	def __init__(self, *args, **kwargs):
+	 super().__init__(*args, **kwargs)
