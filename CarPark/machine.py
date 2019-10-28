@@ -16,8 +16,10 @@ class Car:
         self.owner = owner
     
     def park(self, carpark:CarParking):
-        carpark.valid -= 1
-        carpark.park.append(self)
+        if carpark.valid >0:
+            carpark.valid -= 1
+            carpark.park.append(self)
+
 
 house = CarParking(10,100)
 korn = Person('korn',19)
