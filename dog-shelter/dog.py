@@ -24,11 +24,11 @@ class Shelter:
         """Shelter constucter"""
         self.dog_list = dog_list
 
-    def add_dog(self, dog: Dog):
+    def __add_dog__(self, dog: Dog):
         """Class method to add Dog into shelter"""
         self.dog_list.append(dog)
 
-    def euthanize(self, lucky_dog_name: str, lucky_dog_breed: str, lucky_dog_age: int):
+    def __euthanize__(self, lucky_dog_name: str, lucky_dog_breed: str, lucky_dog_age: int):
         """Class method to get rid of unwanted dog"""
         for dog in self.dog_list:
             if dog.name == lucky_dog_name and dog.breed == lucky_dog_breed and dog.age == lucky_dog_age:
