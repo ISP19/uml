@@ -39,4 +39,3 @@ class Rectangle(Polygon):
     def area(self) -> float:
         """Return the area of this rectangle"""
         return abs(self.width * self.height)
-    
