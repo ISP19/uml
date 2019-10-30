@@ -1,4 +1,4 @@
-#6110545473 Chananchida
+"""6110545473 Chananchida Fuachai"""
 class Book:
     """A Book class"""
     def __init__(self, title: str, author: str, book_id):
@@ -32,7 +32,7 @@ class Library:
 
     def remove_book(self, book: Book):
         """Remove a specify book from list"""
-        pass
+        self.books.remove(book)
 
 
 class Librarian:
@@ -41,11 +41,15 @@ class Librarian:
         """Librarian constructor"""
         self.name = name
         self.librarian_id = librarian_id
+        self.issue = []
 
     def issue_book(self, book: Book):
         """Issue book"""
-        pass
+        index = self.issue.index(book)
+        self.issue[index].is_lend = True
+
 
     def return_book(self, book: Book):
         """Return book after lend"""
-        pass
+        index = self.issue.index(book)
+        self.issue[index].is_lend = False
