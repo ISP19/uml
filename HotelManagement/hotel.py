@@ -1,35 +1,44 @@
+"""This code shows hotel management"""
 class Customer:
-    """Class"""
-    def __init__(self, booking_id:string, room:Room, name:string, phone_number:string, billing:float):
+    """This class collect information on the customers"""
+    def __init__(self, booking_id: str, name: str, billing: float):
         self.booking_id = booking_id
-        self.room = room
         self.name = name
-        self.phone_number = phone_number
         self.billing = billing
 
+    def request_room_service(self):
+        """This meathod is use when cutomer wants to use room service"""
+        # code omitted
+
+    def request_room(self):
+        """This meathod is use to check if the room is available"""
+        # code omitted
+
 class Room:
-    def __init__(self, room_no: int, floor: int):
-        self.room = room
+    """Informations on room"""
+    def __init__(self, room_no: int, floor: int, customer: Customer):
+        self.room = room_no
         self.floor = floor
-    
-    def stay(self):
+        self.status = True
+
+    def check_staying(self):
         """test if customer is staying in that room"""
         # code omitted
-        return True
 
-class Receptionist():
+class Receptionist:
+    """This class is use when customer books, or cancel a room"""
     def __init__(self, desk_number):
-        self.customer_list = [] #customer is a list of Customers
         self.desk_number = desk_number
+        self.room_list = []
 
-    def book_room(self):
+    def book_room(self, customer, room_no):
+        """This meathod is use when customer books a room"""
         # code omitted
-        pass
 
-    def cancel_booking(self):
+    def cancel_booking(self, customer, room_no):
+        """This meathod is use to delete information on customer booking"""
         # code omitted
-        pass
 
-    def generate_bill(self):
+    def generate_bill(self, room):
+        """This meathod calculates the bill for each customers"""
         # code omitted
-        pass
