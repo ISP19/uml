@@ -31,15 +31,10 @@ class Category:
     def total_books(self) -> int:
         """ Return number of all books in this category."""
         # code omitted
-        total = 0
-        for book in self.books:
-            total += book.quantity
-        return total
 
     def add_new_book(self, book: Book):
         """ Add new Book to this Category"""
         # code omitted
-        self.books.append(book)
 
 
 class Library:
@@ -55,11 +50,7 @@ class Library:
     def search_book(self, book_name: str) -> Category or None:
         """ Return categories that have 'book_name' book"""
         # code omitted
-        for category in self.categories:
-            for book in category:
-                if book.name == book_name:
-                    return category
-        return None
 
     def add_new_category(self, category: Category):
-        self.categories.append(category)
+        """ Add new Category to Library"""
+	# code omitted

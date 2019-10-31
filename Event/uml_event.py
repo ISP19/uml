@@ -36,16 +36,10 @@ class Contact:
         return self.number
 
 class Person:
-    """
-     Collect information of a participant.
-    """
     def __init__(self, firstname, lastname, gender):
         self.firstname = firstname
         self.lastname = lastname
         self.gender = gender
-
-    def __str__(self):
-        return self.firstname + " " + self.gender
 
     def get_firstname(self):
         """
@@ -54,9 +48,6 @@ class Person:
         return self.firstname
 
 class Activity:
-    """
-    Collect information about activities.
-    """
     def __init__(self, name, address: Address, contact: Contact, person: Person):
         self.name = name
         self.address = address
@@ -66,24 +57,10 @@ class Activity:
     def __str__(self):
         return self.name
 
-    def get_name(self):
-        """
-        name
-        """
-        return self.name
-
 class Event:
-    """
-    Collect all activities.
-    """
     def __init__(self, activity: Activity):
         self.activity = activity
 
     def __str__(self):
         return "Activity"
 
-    def get_activity(self):
-        """
-        activity
-        """
-        return self
